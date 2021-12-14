@@ -311,7 +311,7 @@ const EventTypesPage = () => {
   return (
     <div>
       <Head>
-        <title>Home | Cal.com</title>
+        <title>Home | cal.impactsuites.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Shell
@@ -335,10 +335,10 @@ const EventTypesPage = () => {
                   severity="warning"
                   title={<>{t("plan_upgrade")}</>}
                   message={
-                    <Trans i18nKey="plan_upgrade_instructions">
-                      You can
-                      <a href="/api/upgrade" className="underline">
-                        upgrade here
+                    <>
+                      {t("to_upgrade_go_to")}{" "}
+                      <a href={"https://cal.impactsuites.com/upgrade"} className="underline">
+                        {"https://cal.impactsuites.com/upgrade"}
                       </a>
                       .
                     </Trans>

@@ -2,7 +2,7 @@ import slugify from "@lib/slugify";
 
 export async function checkPremiumUsername(_username: string) {
   const username = slugify(_username);
-  const response = await fetch("https://cal.com/api/username", {
+  const response = await fetch("https://cal.impactsuites.com/api/username", {
     credentials: "include",
     headers: {
       "Content-Type": "application/json",

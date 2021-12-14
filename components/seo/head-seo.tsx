@@ -88,15 +88,8 @@ export const HeadSeo: React.FC<HeadSeoProps & { children?: never }> = (props) =>
     nextSeoProps = {},
   } = props;
 
-  const truncatedDescription = description.length > 24 ? description.substring(0, 23) + "..." : description;
-  const pageTitle = title + " | Cal.com";
-  let seoObject = buildSeoMeta({
-    title: pageTitle,
-    image,
-    description: truncatedDescription,
-    canonical,
-    siteName,
-  });
+  const pageTitle = title + " | cal.impactsuites.com";
+  let seoObject = buildSeoMeta({ title: pageTitle, image, description, canonical, siteName });
 
   if (name && username) {
     const pageImage = getSeoImage("ogImage") + constructImage(name, truncatedDescription, username);

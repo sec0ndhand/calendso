@@ -247,12 +247,14 @@ export default function Success(props: inferSSRProps<typeof getServerSideProps>)
                   )}
                   {!props.hideBranding && (
                     <div className="pt-4 text-xs text-center text-gray-400 dark:border-gray-900 dark:text-white">
-                      <a href="https://cal.com/signup">{t("create_booking_link_with_calcom")}</a>
+                      <a href="https://cal.impactsuites.com/signup">{t("create_booking_link_with_calcom")}</a>
 
                       <form
                         onSubmit={(e) => {
                           e.preventDefault();
-                          router.push(`https://cal.com/signup?email=` + (e as any).target.email.value);
+                          router.push(
+                            `https://cal.impactsuites.com/signup?email=` + (e as any).target.email.value
+                          );
                         }}
                         className="flex mt-4">
                         <EmailInput

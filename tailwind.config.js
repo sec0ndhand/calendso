@@ -101,7 +101,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        cal: ["Cal Sans", "sans-serif"],
+        cal: ["proxima-nova", "sans-serif"],
       },
       maxHeight: (theme) => ({
         0: "0",

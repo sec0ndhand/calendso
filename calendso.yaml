@@ -9,7 +9,7 @@ info:
     name: MIT License
     url: "https://opensource.org/licenses/MIT"
   version: 1.0.0
-  termsOfService: "https://cal.com/terms"
+  termsOfService: "https://cal.impactsuites.com/terms"
 server:
   url: "http://localhost:{port}"
   description: Local Development Server
@@ -1068,7 +1068,7 @@ paths:
         required: true
         description: The team which you wish to list members of
 servers:
-  - url: "https://app.cal.com"
+  - url: "https://cal.impactsuites.com"
     description: Production
 components:
   securitySchemes: {}

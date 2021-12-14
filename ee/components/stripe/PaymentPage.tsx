@@ -36,7 +36,7 @@ const PaymentPage: FC<PaymentPageProps> = (props) => {
     <div className="h-screen bg-neutral-50 dark:bg-neutral-900">
       <Head>
         <title>
-          {t("payment")} | {eventName} | Cal.com
+          {t("payment")} | {eventName} | cal.impactsuites.com
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -118,7 +118,7 @@ const PaymentPage: FC<PaymentPageProps> = (props) => {
                 </div>
                 {!props.profile.hideBranding && (
                   <div className="pt-4 mt-4 text-xs text-center text-gray-400 border-t dark:border-gray-900 dark:text-white">
-                    <a href="https://cal.com/signup">{t("create_booking_link_with_calcom")}</a>
+                    <a href="https://cal.impactsuites.com/signup">{t("create_booking_link_with_calcom")}</a>
                   </div>
                 )}
               </div>

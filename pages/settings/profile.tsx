@@ -74,13 +74,12 @@ function HideBrandingInput(props: { hideBrandingRef: RefObject<HTMLInputElement>
           <div className="flex flex-col space-y-3">
             <p>{t("remove_cal_branding_description")}</p>
             <p>
-              <Trans i18nKey="plan_upgrade_instructions">
-                You can
-                <a href="/api/upgrade" className="underline">
-                  upgrade here
-                </a>
-                .
-              </Trans>
+              {" "}
+              {t("to_upgrade_go_to")}{" "}
+              <a href="https://cal.impactsuites.com/upgrade" className="underline">
+                cal.com/upgrade
+              </a>
+              .
             </p>
           </div>
           <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse gap-x-2">

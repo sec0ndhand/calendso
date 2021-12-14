@@ -56,7 +56,10 @@ export default function Signup({ email }: Props) {
       method: "POST",
     })
       .then(handleErrors)
-      .then(async () => await signIn("Cal.com", { callbackUrl: (router.query.callbackUrl || "") as string }))
+      .then(
+        async () =>
+          await signIn("cal.impactsuites.com", { callbackUrl: (router.query.callbackUrl || "") as string })
+      )
       .catch((err) => {
         methods.setError("apiError", { message: err.message });
       });
@@ -123,7 +126,9 @@ export default function Signup({ email }: Props) {
                   color="secondary"
                   className="justify-center w-5/12"
                   onClick={() =>
-                    signIn("Cal.com", { callbackUrl: (router.query.callbackUrl || "") as string })
+                    signIn("cal.impactsuites.com", {
+                      callbackUrl: (router.query.callbackUrl || "") as string,
+                    })
                   }>
                   {t("login_instead")}
                 </Button>

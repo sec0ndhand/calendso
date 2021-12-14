@@ -69,17 +69,45 @@ export default function Login({
     </span>
   );
 
-  const TwoFactorFooter = (
-    <Button
-      onClick={() => {
-        setTwoFactorRequired(false);
-        form.setValue("totpCode", "");
-      }}
-      StartIcon={ArrowLeftIcon}
-      color="minimal">
-      {t("go_back")}
-    </Button>
-  );
+  return (
+    <div className="min-h-screen bg-neutral-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <HeadSeo title={t("login")} description={t("login")} />
+
+      {isSubmitting && (
+        <div className="z-50 absolute w-full h-screen bg-gray-50 flex items-center">
+          <Loader />
+        </div>
+      )}
+
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <img className="h-6 mx-auto" src="/calendso-logo-white-word.svg" alt="cal.impactsuites.com Logo" />
+        <h2 className="font-cal mt-6 text-center text-3xl font-bold text-neutral-900">
+          {t("sign_in_account")}
+        </h2>
+      </div>
+
+      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="bg-white py-8 px-4 mx-2 rounded-sm sm:px-10 border border-neutral-200">
+          <form className="space-y-6" onSubmit={handleSubmit}>
+            <input name="csrfToken" type="hidden" defaultValue={csrfToken || undefined} hidden />
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-700">
+                {t("email_address")}
+              </label>
+              <div className="mt-1">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  inputMode="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onInput={(e) => setEmail(e.currentTarget.value)}
+                  className="appearance-none block w-full px-3 py-2 border border-neutral-300 rounded-sm shadow-sm placeholder-gray-400 focus:outline-none focus:ring-neutral-900 focus:border-neutral-900 sm:text-sm"
+                />
+              </div>
+            </div>
 
   return (
     <>
@@ -167,18 +195,27 @@ export default function Login({
                 </Button>
               </div>
             )}
-            {isSAMLLoginEnabled && (
-              <SAMLLogin
-                email={form.getValues("email")}
-                samlTenantID={samlTenantID}
-                samlProductID={samlProductID}
-                hostedCal={hostedCal}
-                setErrorMessage={setErrorMessage}
-              />
-            )}
-          </>
-        )}
-      </AuthContainer>
+
+            <div className="space-y-2">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-sm shadow-sm text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                {t("sign_in")}
+              </button>
+            </div>
+
+            {errorMessage && <p className="mt-1 text-sm text-red-700">{errorMessage}</p>}
+          </form>
+        </div>
+        <div className="mt-4 text-neutral-600 text-center text-sm">
+          {t("dont_have_an_account")} {/* replace this with your account creation flow */}
+          <a href="https://cal.impactsuites.com/signup" className="font-medium text-neutral-900">
+            {t("create_an_account")}
+          </a>
+        </div>
+      </div>
+
       <AddToHomescreen />
     </>
   );

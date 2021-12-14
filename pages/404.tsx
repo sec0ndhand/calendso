@@ -26,7 +26,7 @@ export default function Custom404() {
       title: t("blog"),
       description: t("blog_description"),
       icon: BookOpenIcon,
-      href: "https://cal.com/blog",
+      href: "https://cal.impactsuites.com/blog",
     },
   ];
 
@@ -51,10 +51,8 @@ export default function Custom404() {
             </h1>
             {isSubpage ? (
               <span className="inline-block mt-2 text-lg ">{t("check_spelling_mistakes_or_go_back")}</span>
-            ) : process.env.NEXT_PUBLIC_BASE_URL === "https://app.cal.com" ? (
-              <a
-                href={"https://cal.com/signup?username=" + username.replace("/", "")}
-                className="inline-block mt-2 text-lg ">
+            ) : (
+              <a href="https://cal.impactsuites.com/signup" className="inline-block mt-2 text-lg ">
                 {t("the_username")} <strong className="text-blue-500">cal.com{username}</strong>{" "}
                 {t("is_still_available")} <span className="text-blue-500">{t("register_now")}</span>.
               </a>
@@ -75,10 +73,10 @@ export default function Custom404() {
             </h2>
             {!isSubpage && process.env.NEXT_PUBLIC_BASE_URL === "https://app.cal.com" && (
               <ul role="list" className="mt-4">
-                <li className="px-4 py-2 border-2 border-green-500">
+                <li className="border-2 border-green-500 px-4 py-2">
                   <a
-                    href={"https://cal.com/signup?username=" + username.replace("/", "")}
-                    className="relative flex items-start py-6 rtl:space-x-reverse space-x-4">
+                    href="https://cal.impactsuites.com/signup"
+                    className="relative py-6 flex items-start space-x-4">
                     <div className="flex-shrink-0">
                       <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-green-50">
                         <CheckIcon className="w-6 h-6 text-green-500" aria-hidden="true" />
@@ -131,8 +129,8 @@ export default function Custom404() {
               ))}
               <li className="px-4 py-2">
                 <a
-                  href="https://cal.com/slack"
-                  className="relative flex items-start py-6 rtl:space-x-reverse space-x-4">
+                  href="https://cal.impactsuites.com/slack"
+                  className="relative py-6 flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-gray-50">
                       <svg viewBox="0 0 2447.6 2452.5" className="w-6 h-6" xmlns="http://www.w3.org/2000/svg">

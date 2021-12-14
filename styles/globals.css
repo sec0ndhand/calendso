@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --brand-color: #292929;
+  --brand-color: #233efa;
   --brand-text-color: #ffffff;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .react-daterange-picker > .react-daterange-picker__wrapper input {
-  /* Makes sure the on-focus behaviour is like Cal.com's */
+  /* Makes sure the on-focus behaviour is like cal.impactsuites.com's */
   @apply rounded-sm focus:ring-primary-500 focus:border-primary-500 h-auto py-0.5 my-0.5;
 }
 

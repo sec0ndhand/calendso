@@ -5,33 +5,32 @@
 
   </a>
 
-  <h3 align="center">Cal.com (formerly Calendso)</h3>
+  <h3 align="center">cal.impactsuites.com (formerly Calendso)</h3>
 
   <p align="center">
     The open-source Calendly alternative.
     <br />
-    <a href="https://cal.com"><strong>Learn more »</strong></a>
+    <a href="https://cal.impactsuites.com"><strong>Learn more »</strong></a>
     <br />
     <br />
-    <a href="https://cal.com/slack">Slack</a>
+    <a href="https://cal.impactsuites.com/slack">Slack</a>
     ·
-    <a href="https://cal.com">Website</a>
+    <a href="https://cal.impactsuites.com">Website</a>
     ·
     <a href="https://github.com/calcom/cal.com/issues">Issues</a>
   </p>
 </p>
 
 <p align="center">
-   <a href="https://cal.com/slack"><img src="https://img.shields.io/badge/Slack-calendso.slack.com-%234A154B" alt="Join Cal.com Slack"></a>
+   <a href="https://cal.impactsuites.com/slack"><img src="https://img.shields.io/badge/Slack-calendso.slack.com-%234A154B" alt="Join cal.impactsuites.com Slack"></a>
    <a href="https://www.producthunt.com/posts/calendso"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Month-%23DA552E" alt="Product Hunt"></a>
   <a href="https://github.com/calcom/cal.com/stargazers"><img src="https://img.shields.io/github/stars/calcom/cal.com" alt="Github Stars"></a>
   <a href="https://news.ycombinator.com/item?id=26817795"><img src="https://img.shields.io/badge/Hacker%20News-311-%23FF6600" alt="Hacker News"></a>
-  <a href="https://github.com/calcom/cal.com/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
-  <img src="https://img.shields.io/github/package-json/v/calcom/cal.com">
-  <a href="https://github.com/calcom/cal.com/pulse"><img src="https://img.shields.io/github/commit-activity/m/calcom/cal.com" alt="Commits-per-month"></a>
-  <a href="https://cal.com/pricing"><img src="https://img.shields.io/badge/Pricing-%2412%2Fmonth-brightgreen" alt="Pricing"></a>
-  <a href="https://jitsu.com?utm_source=github/calcom/cal.com"><img src="https://img.shields.io/badge/Metrics_tracked_by-JITSU-AA00FF?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACKSURBVHgBrZDRCYAwDEQv6gCOoKO4hOCXI9QVnEZwiY5iF5GaVClaBNtioCSUvCR3tMJaxIfZgW4AGUoEPVwgPZoS0Dmgg3NBVDFNbMIsmYCak3J1jDk9iCQvsKJvkzr71N81Gj6vDT/LU2P6RhY63jcafk3YJEbgeZpiFyc/5HJKv8Ef273NSfABGbQfUZhnOSAAAAAASUVORK5CYII=" alt="Jitsu Tracked"></a>
-  
+  <a href="https://github.com/calendso/calendso/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
+  <img src="https://img.shields.io/github/package-json/v/calendso/calendso">
+  <a href="https://github.com/calendso/calendso/pulse"><img src="https://img.shields.io/github/commit-activity/m/calendso/calendso" alt="Commits-per-month"></a>
+  <a href="https://cal.impactsuites.com/pricing"><img src="https://img.shields.io/badge/Pricing-%2412%2Fmonth-brightgreen" alt="Pricing"></a>  
+  <a href="https://cal.crowdin.com/Cal"><img src="https://badges.crowdin.net/e/5a55420475b48696779e30e0208a1899/localized.svg" alt="Translate Slack"></a>
 </p>
 
 <!-- ABOUT THE PROJECT -->
@@ -47,13 +46,13 @@ of your own data, workflow and appearance.
 
 Calendly and other scheduling tools are awesome. It made our lives massively easier. We're using it for business meetings, seminars, yoga classes and even calls with our families. However, most tools are very limited in terms of control and customisations.
 
-That's where Cal.com comes in. Self-hosted or hosted by us. White-label by design. API-driven and ready to be deployed on your own domain. Full control of your events and data.
+That's where cal.impactsuites.com comes in. Self-hosted or hosted by us. White-label by design. API-driven and ready to be deployed on your own domain. Full control of your events and data.
 
 ## Product of the Month: April
 
 #### Support us on [Product Hunt](https://www.producthunt.com/posts/calendso?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-calendso)
 
-<a href="https://www.producthunt.com/posts/calendso?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-calendso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=291910&theme=light&period=monthly" alt="Cal.com - The open source Calendly alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> <a href="https://www.producthunt.com/posts/calendso?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-calendso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=291910&theme=light" alt="Cal.com - The open source Calendly alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> <a href="https://www.producthunt.com/stories/how-this-open-source-calendly-alternative-rocketed-to-product-of-the-day" target="_blank"><img src="https://cal.com/maker-grant.svg" alt="Cal.com - The open source Calendly alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://www.producthunt.com/posts/calendso?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-calendso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=291910&theme=light&period=monthly" alt="cal.impactsuites.com - The open source Calendly alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> <a href="https://www.producthunt.com/posts/calendso?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-calendso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=291910&theme=light" alt="cal.impactsuites.com - The open source Calendly alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a> <a href="https://www.producthunt.com/stories/how-this-open-source-calendly-alternative-rocketed-to-product-of-the-day" target="_blank"><img src="https://cal.impactsuites.com/maker-grant.svg" alt="cal.impactsuites.com - The open source Calendly alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ### Built With
 
@@ -149,7 +148,7 @@ yarn dx
    6. Once you completed the above steps, click on your newly created `Heroku Postgres` and go to its `Settings`.
       ![image](https://user-images.githubusercontent.com/16905768/115323367-e92ea980-a17f-11eb-9ff4-dec95f2ec349.png)
 
-   7. In `Settings`, copy your URI to your Cal.com .env file and replace the `postgresql://<user>:<pass>@<db-host>:<db-port>` with it.
+   7. In `Settings`, copy your URI to your cal.impactsuites.com .env file and replace the `postgresql://<user>:<pass>@<db-host>:<db-port>` with it.
       ![image](https://user-images.githubusercontent.com/16905768/115323556-4591c900-a180-11eb-9808-2f55d2aa3995.png)
       ![image](https://user-images.githubusercontent.com/16905768/115323697-7a9e1b80-a180-11eb-9f08-a742b1037f90.png)
 
@@ -244,7 +243,7 @@ yarn test-playwright
 
 ### Docker
 
-The Docker configuration for Cal is an effort powered by people within the community. Cal.com, Inc. does not provide official support for Docker, but we will accept fixes and documentation. Use at your own risk.
+The Docker configuration for Cal is an effort powered by people within the community. cal.impactsuites.com, Inc. does not provide official support for Docker, but we will accept fixes and documentation. Use at your own risk.
 
 If you want to contribute to the Docker repository, [reply here](https://github.com/calcom/docker/discussions/32).
 
@@ -293,7 +292,7 @@ Contributions are what make the open source community such an amazing place to b
 6. In the third page (Test Users), add the Google account(s) you'll using. Make sure the details are correct on the last page of the wizard and your consent screen will be configured.
 7. Now select [Credentials](https://console.cloud.google.com/apis/credentials) from the side pane and then select Create Credentials. Select the OAuth Client ID option.
 8. Select Web Application as the Application Type.
-9. Under Authorized redirect URI's, select Add URI and then add the URI `<Cal.com URL>/api/integrations/googlecalendar/callback` replacing Cal.com URL with the URI at which your application runs.
+9. Under Authorized redirect URI's, select Add URI and then add the URI `<cal.impactsuites.com URL>/api/integrations/googlecalendar/callback` replacing cal.impactsuites.com URL with the URI at which your application runs.
 10. The key will be created and you will be redirected back to the Credentials page. Select the newly generated client ID under OAuth 2.0 Client IDs.
 11. Select Download JSON. Copy the contents of this file and paste the entire JSON string in the .env file as the value for GOOGLE_API_CREDENTIALS key.
 
@@ -302,7 +301,7 @@ Contributions are what make the open source community such an amazing place to b
 1. Open [Azure App Registration](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and select New registration
 2. Name your application
 3. Set **Who can use this application or access this API?** to **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**
-4. Set the **Web** redirect URI to `<Cal.com URL>/api/integrations/office365calendar/callback` replacing Cal.com URL with the URI at which your application runs.
+4. Set the **Web** redirect URI to `<cal.impactsuites.com URL>/api/integrations/office365calendar/callback` replacing cal.impactsuites.com URL with the URI at which your application runs.
 5. Use **Application (client) ID** as the **MS_GRAPH_CLIENT_ID** attribute value in .env
 6. Click **Certificates & secrets** create a new client secret and use the value as the **MS_GRAPH_CLIENT_SECRET** attribute
 
@@ -316,18 +315,13 @@ Contributions are what make the open source community such an amazing place to b
 6. De-select the option to publish the app on the Zoom App Marketplace.
 7. Click "Create".
 8. Now copy the Client ID and Client Secret to your .env file into the `ZOOM_CLIENT_ID` and `ZOOM_CLIENT_SECRET` fields.
-9. Set the Redirect URL for OAuth `<Cal.com URL>/api/integrations/zoomvideo/callback` replacing Cal.com URL with the URI at which your application runs.
+9. Set the Redirect URL for OAuth `<cal.impactsuites.com URL>/api/integrations/zoomvideo/callback` replacing cal.impactsuites.com URL with the URI at which your application runs.
 10. Also add the redirect URL given above as a allow list URL and enable "Subdomain check". Make sure, it says "saved" below the form.
 11. You don't need to provide basic information about your app. Instead click at "Scopes" and then at "+ Add Scopes". On the left, click the category "Meeting" and check the scope `meeting:write`.
 12. Click "Done".
-13. You're good to go. Now you can easily add your Zoom integration in the Cal.com settings.
+13. You're good to go. Now you can easily add your Zoom integration in the cal.impactsuites.com settings.
 
 ### Obtaining Daily API Credentials
-
-1. Open [Daily](https://www.daily.co/) and sign into your account.
-2. From within your dashboard, go to the [developers](https://dashboard.daily.co/developers) tab.
-3. Copy your API key.
-4. Now paste the API key to your .env file into the `DAILY_API_KEY` field in your .env file.
 
 <!-- LICENSE -->
 
@@ -339,9 +333,9 @@ Distributed under the AGPLv3 License. See `LICENSE` for more information.
 
 ## Acknowledgements
 
-Special thanks to these amazing projects which help power Cal.com:
+Special thanks to these amazing projects which help power cal.impactsuites.com:
 
-[<img src="https://cal.com/powered-by-vercel.svg">](https://vercel.com/?utm_source=calend-so&utm_campaign=oss)
+[<img src="https://cal.impactsuites.com/powered-by-vercel.svg">](https://vercel.com/?utm_source=calend-so&utm_campaign=oss)
 
 - [Vercel](https://vercel.com/?utm_source=calend-so&utm_campaign=oss)
 - [Next.js](https://nextjs.org/)

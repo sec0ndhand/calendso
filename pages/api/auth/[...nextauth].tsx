@@ -148,14 +148,20 @@ export default NextAuth({
     signOut: "/auth/logout",
     error: "/auth/error", // Error code passed in query string as ?error=
   },
-  providers,
-  callbacks: {
-    async jwt({ token, user, account }) {
-      const autoMergeIdentities = async () => {
-        if (!hostedCal) {
-          const existingUser = await prisma.user.findFirst({
-            where: { email: token.email! },
-          });
+  providers: [
+    Providers.Credentials({
+      name: "cal.impactsuites.com",
+      credentials: {
+        email: { label: "Email Address", type: "email", placeholder: "john.doe@example.com" },
+        password: { label: "Password", type: "password", placeholder: "Your super secure password" },
+        totpCode: { label: "Two-factor Code", type: "input", placeholder: "Code from authenticator app" },
+      },
+      async authorize(credentials) {
+        const user = await prisma.user.findUnique({
+          where: {
+            email: credentials.email.toLowerCase(),
+          },
+        });
 
           if (!existingUser) {
             return token;

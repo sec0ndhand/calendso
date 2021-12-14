@@ -193,7 +193,7 @@ export default function Shell(props: {
     <>
       <CustomBranding val={user?.brandColor} />
       <HeadSeo
-        title={pageTitle ?? "Cal.com"}
+        title={pageTitle ?? "cal.impactsuites.com"}
         description={props.subtitle ? props.subtitle?.toString() : ""}
         nextSeoProps={{
           nofollow: true,
@@ -400,7 +400,7 @@ function UserDropdown({ small }: { small?: boolean }) {
                   {user?.username || "Nameless User"}
                 </span>
                 <span className="block font-normal truncate text-neutral-500">
-                  {user?.username ? `cal.com/${user.username}` : "No public page"}
+                  {user?.username ? `cal.impactsuites.com/${user.username}` : "No public page"}
                 </span>
               </span>
               <SelectorIcon
@@ -446,7 +446,7 @@ function UserDropdown({ small }: { small?: boolean }) {
         <DropdownMenuSeparator className="h-px bg-gray-200" />
         <DropdownMenuItem>
           <a
-            href="https://cal.com/slack"
+            href="https://cal.impactsuites.com/slack"
             target="_blank"
             rel="noreferrer"
             className="flex px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
