@@ -80,7 +80,11 @@ export default function Login({
       )}
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <img className="h-6 mx-auto" src="/calendso-logo-white-word.svg" alt="cal.impactsuites.com Logo" />
+        <img
+          className="h-6 mx-auto"
+          src="https://impactsuite.com/img/logo.svg"
+          alt="cal.impactsuites.com Logo"
+        />
         <h2 className="font-cal mt-6 text-center text-3xl font-bold text-neutral-900">
           {t("sign_in_account")}
         </h2>
