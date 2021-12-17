@@ -1,23 +1,13 @@
-import { GetServerSidePropsContext } from "next";
-import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/client";
 import { useRouter } from "next/router";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 
-import { asStringOrUndefined } from "@lib/asStringOrNull";
 import { useLocale } from "@lib/hooks/useLocale";
-import prisma from "@lib/prisma";
-import { isSAMLLoginEnabled } from "@lib/saml";
-import { inferSSRProps } from "@lib/types/inferSSRProps";
 
 import { EmailField, PasswordField, TextField } from "@components/form/fields";
 import { HeadSeo } from "@components/seo/head-seo";
 import { Alert } from "@components/ui/Alert";
 import Button from "@components/ui/Button";
-
-import { IS_GOOGLE_LOGIN_ENABLED } from "@server/lib/constants";
-import { ssrInit } from "@server/lib/ssr";
-
-type Props = inferSSRProps<typeof getServerSideProps>;
 
 type FormValues = {
   username: string;
@@ -27,7 +17,7 @@ type FormValues = {
   apiError: string;
 };
 
-export default function Signup({ email }: Props) {
+export default function Signup({ email = "" }) {
   const { t } = useLocale();
   const router = useRouter();
   const methods = useForm<FormValues>();
@@ -140,55 +130,3 @@ export default function Signup({ email }: Props) {
     </div>
   );
 }
-
-export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
-  const ssr = await ssrInit(ctx);
-  const token = asStringOrUndefined(ctx.query.token);
-  const verificationRequest = await prisma.verificationRequest.findUnique({
-    where: {
-      token,
-    },
-  });
-
-  // for now, disable if no verificationRequestToken given or token expired
-  if (verificationRequest && verificationRequest.expires < new Date()) {
-    return {
-      notFound: true,
-    };
-  }
-
-  const email = verificationRequest?.identifier || "";
-
-  const existingUser = await prisma.user.findFirst({
-    where: {
-      AND: [
-        {
-          email,
-        },
-        {
-          emailVerified: {
-            not: null,
-          },
-        },
-      ],
-    },
-  });
-
-  if (existingUser) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: "/auth/login?callbackUrl=" + ctx.query.callbackUrl,
-      },
-    };
-  }
-
-  return {
-    props: {
-      isGoogleLoginEnabled: IS_GOOGLE_LOGIN_ENABLED,
-      isSAMLLoginEnabled,
-      email,
-      trpcState: ssr.dehydrate(),
-    },
-  };
-};
