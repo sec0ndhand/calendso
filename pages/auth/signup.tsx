@@ -3,7 +3,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 
-import { asStringOrNull } from "@lib/asStringOrNull";
+import { asStringOrUndefined } from "@lib/asStringOrNull";
 import { useLocale } from "@lib/hooks/useLocale";
 import prisma from "@lib/prisma";
 import { isSAMLLoginEnabled } from "@lib/saml";
@@ -143,12 +143,7 @@ export default function Signup({ email }: Props) {
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const ssr = await ssrInit(ctx);
-  const token = asStringOrNull(ctx.query.token);
-  if (!token) {
-    return {
-      notFound: true,
-    };
-  }
+  const token = asStringOrUndefined(ctx.query.token);
   const verificationRequest = await prisma.verificationRequest.findUnique({
     where: {
       token,
@@ -156,17 +151,19 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   });
 
   // for now, disable if no verificationRequestToken given or token expired
-  if (!verificationRequest || verificationRequest.expires < new Date()) {
+  if (verificationRequest && verificationRequest.expires < new Date()) {
     return {
       notFound: true,
     };
   }
 
+  const email = verificationRequest?.identifier || "";
+
   const existingUser = await prisma.user.findFirst({
     where: {
       AND: [
         {
-          email: verificationRequest.identifier,
+          email,
         },
         {
           emailVerified: {
@@ -190,7 +187,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     props: {
       isGoogleLoginEnabled: IS_GOOGLE_LOGIN_ENABLED,
       isSAMLLoginEnabled,
-      email: verificationRequest.identifier,
+      email,
       trpcState: ssr.dehydrate(),
     },
   };
